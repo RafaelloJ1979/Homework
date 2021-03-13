@@ -2,15 +2,16 @@
     box-sizing: border-box;
 }
 
-h2{
+h2 {
     font-weight: 00;
 }
+
 #footer {
     height: 70px;
     width: 100%;
 }
 
-.listaol{
+.listaol {
     margin-left: 50px;
 }
 
@@ -19,13 +20,3 @@ h2{
     flex-direction: column;
     align-items: flex-start;
 }
-
-
-
-
-
-
-
-
-
-
