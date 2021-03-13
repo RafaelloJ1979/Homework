@@ -1,22 +1,22 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h2 {
-    font-weight: 00;
+  font-weight: 00;
 }
 
 #footer {
-    height: 70px;
-    width: 100%;
+  height: 70px;
+  width: 100%;
 }
 
 .listaol {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 #buttonblock {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
