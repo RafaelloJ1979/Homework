@@ -1,66 +1,65 @@
 body {
-    box-sizing: border-box;
-    background-color: rgba(7, 1, 36, 0.062);
+  box-sizing: border-box;
+  background-color: rgba(7, 1, 36, 0.062);
 }
 
 #container {
-    text-align: center;
+  text-align: center;
 }
 
 #firstP {
-    font-size: 26px;
-    color: tomato;
+  font-size: 26px;
+  color: tomato;
 }
 
 h1 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 h2 {
-    color: steelblue;
-    font-family: 30px;
+  color: steelblue;
+  font-family: 30px;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(0, 23, 233);
+  text-decoration: none;
+  color: rgb(0, 23, 233);
 }
 
 a:hover {
-    color: rgb(241, 0, 0);
+  color: rgb(241, 0, 0);
 }
 
 ul {
-    list-style-position: inside;
-    letter-spacing: 10px;
-    padding-left: 0;
+  list-style-position: inside;
+  letter-spacing: 10px;
+  padding-left: 0;
 }
 
 li {
-    color: red;
+  color: red;
 }
 
 #up {
-    background-color: rgba(51, 255, 0, 0.466);
-    border-radius: 5px;
+  background-color: rgba(51, 255, 0, 0.466);
+  border-radius: 5px;
 }
 
 p {
-    color: rgb(37, 4, 155);
-    margin-left: 50px;
-    margin-right: 50px;
-    letter-spacing: 2px;
-    word-spacing: 5px;
+  color: rgb(37, 4, 155);
+  margin-left: 50px;
+  margin-right: 50px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
 }
 
 button {
-    border-radius: 5px;
-    background-color: tomato;
-    outline: none;
+  border-radius: 5px;
+  background-color: tomato;
+  outline: none;
 }
 
 #sposob2i3 {
-    display: inline-flex;
-    flex-direction: column;
+  display: inline-flex;
+  flex-direction: column;
 }
-
