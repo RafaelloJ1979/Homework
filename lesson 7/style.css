@@ -166,9 +166,10 @@ a {
   text-decoration: none;
   font-size: 16px;
   font-family: system-ul;
+  color: black;
 }
 
 a:hover {
-  color: rgb(250, 0, 0);
+  color: rgba(187, 4, 4, 0.63);
   box-shadow: 0px 0px 7px rgba(100, 96, 106, 0.2);
 }
