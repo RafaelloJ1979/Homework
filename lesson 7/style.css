@@ -16,7 +16,7 @@ body {
 .wrapper {
   box-sizing: border-box;
   display: flex;
-  width: 70vh;
+  width: 80vh;
   height: auto;
   border: 2px solid black;
   margin-bottom: 50px;
@@ -178,5 +178,6 @@ a {
 }
 
 .border-line {
+
   border-bottom: solid 3px #413fb5;
 }
