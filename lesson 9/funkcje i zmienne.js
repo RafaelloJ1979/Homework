@@ -1,84 +1,194 @@
-/* zad.1: */
+/* zad.1:a,b,c,d,e */
 let name = "Karol";
 let age = 40;
 let isOpen = true;
+let stringBoolean = true;
+let stringNumber = 100;
 
-/* zad.2: */
+/* zad.2: a,b,c,d*/
 console.log("Michał");
 console.log("Hello Borys");
 console.log(4);
 console.log(false);
 
-/* zad.2 do 1  */
+/* zad.3*/
 console.log(name);
 console.log(age);
 console.log(isOpen);
+console.log(stringBoolean);
+console.log(stringNumber);
 
-/* zad.3: */
+/* zad.4: */
 console.log(2 + 2);
 console.log("Micha " + "Kowalski");
 console.log(2 + 2 * 2);
 
-/* zad.4: */
-let number = 2 + 2;
-console.log(number);
-
 /* zad.5: */
-let num1 = 1;
+let number = 2 + 2;
+console.log("wynik " + number);
+
+/* zad.6: */
+let numTwo = 1;
 num1 = 2;
 num1 = 3;
 console.log(num1);
 
-/* zad.6: */
+/* zad.7: */
+
 /* a */
-function sum() {
-  let result = 2 + 2;
-  console.log(result);
-  return result;
+function NumberOne() {
+  console.log(2 + 2);
+  return 2 + 2;
 }
-sum();
+NumberOne();
 
 /* b */
-function text() {
-  let result = "Hello World";
-  console.log(result);
-  return result;
+function textNew() {
+  return " Hello World";
 }
-text();
+textNew();
 
 /* c */
-function boolean() {
-  let result = true;
-  console.log(result);
-  return result;
+function booleanAgain() {
+  return true;
 }
-boolean();
+booleanAgain();
 
 /* d */
-function division() {
-  let result = 6 % 4;
-  console.log(result);
-  return result;
+function divisionOne() {
+  return 6 % 4;
 }
-division();
+divisionOne();
 
 /* e */
-function exponentiation() {
-  let result = 3 ** 4;
-  console.log(result);
-  return result;
+function exponentiationNew() {
+  return 3 ** 4;
 }
-exponentiation();
+exponentiationNew();
 
 /* f */
 function stringReturn() {
-  let result = "Hello, ";
-  console.log(result + "how are you ?");
-  return result;
+  return "Hello " + "How are you";
 }
 stringReturn();
 
-/* zad: 7 */
+/* g */
+function multiplicationNew() {
+  return 5 * 60;
+}
+multiplicationNew();
+
+/* h */
+function multiplication() {
+  return 3 * 3600;
+}
+multiplication();
+
+/* i */
+function action() {
+  return (10 * 9) / 2;
+}
+action();
+
+/* j */
+function subtraction() {
+  return 10 - 200;
+}
+subtraction();
+
+/* zad: 10 */
+/* a */
+function sumFirst(a, b) {
+  console.log(a + b);
+  return a + b;
+}
+sumFirst(2, 2);
+
+/* b */
+function textFirst(txt1, txt2) {
+  console.log(txt1 + txt2);
+  return txt1 + txt2;
+}
+textFirst("Hello ", "World");
+
+/* c */
+function booleanOne(Bool) {
+  console.log(Bool);
+  return Bool;
+}
+booleanOne(true);
+
+/* d */
+function divisionFirst() {
+  return 6 % 4;
+}
+divisionFirst();
+/* e */
+function exponentiationAgain() {
+  return 3 ** 4;
+}
+exponentiationAgain();
+
+/* f */
+function stringReturnAgain() {
+  return "Hello " + " How are you";
+}
+stringReturnAgain();
+
+/* zad: 8 */
+
+/* a */
+const tabA = [1, 2, 3];
+
+/* b */
+const tabB = ["AUDI", "BMW", "OPEL", "LAMBO", "FIAT"];
+
+/* c */
+const tabC = [true, false, true];
+
+/* d */
+const tabD = [];
+
+/* e */
+const tabE = ["string", 55, true, null, undefined];
+
+/* f */
+console.log(tabE[1]);
+
+/* g */
+const tabF = [1, 2, "name", 4, true];
+console.log(tabF.length);
+/* h */
+const tabG = [];
+tabG.push("nowy element 1", "nowy element 2");
+console.log(tabG);
+
+/* zad: 9 */
+
+/* a */
+const obiektA = {};
+
+/* b */
+const person = {
+  name: "Iza",
+};
+
+/* c */
+const personDetails = {
+  name: "Adam",
+  lastName: "Kowalski",
+  age: "25",
+  drivingLicence: true,
+};
+
+/* d */
+console.log(personDetails.age);
+
+/* e */
+console.log(personDetails);
+
+/* zad: 10 */
+
 /* a */
 function sum(a, b) {
   console.log(a + b);
@@ -101,52 +211,11 @@ function boolean(Bool) {
 boolean(true);
 
 /* d */
-odp: function division() {
-  let result = 6 % 4;
-  console.log(result);
-  return result;
-}
-division();
-/* e */
-function exponentiation() {
-  let result = 3 ** 4;
-  console.log(result);
-  return result;
-}
-exponentiation();
-/* f */
-function stringReturn() {
-  let result = "Hello, ";
-  console.log(result + "how are you ?");
-  return result;
-}
-stringReturn();
-/* zad: 7 */
-/* a */
-function sum(a, b) {
-  console.log(a + b);
-  return a + b;
-}
-sum(2, 2);
-/* b */
-function text(txt1, txt2) {
-  console.log(txt1 + txt2);
-  return txt1 + txt2;
-}
-text("Hello ", "World");
-/* c */
-function boolean(Bool) {
-  console.log(Bool);
-  return Bool;
-}
-boolean(true);
-
-/* d */
-function division(div1, div2) {
+function division2(div1, div2) {
   console.log(div1 % div2);
   return div1 % div2;
 }
-division(6, 4);
+division2(6, 4);
 
 /* e */
 function exponentiation(n1, n2) {
