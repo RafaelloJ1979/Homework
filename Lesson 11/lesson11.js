@@ -14,5 +14,5 @@ const person = {
     return person
   
   }
-  const osoba = canServBeer(1)
+   const osoba = canServBeer(1)
   
