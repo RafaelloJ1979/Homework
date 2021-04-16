@@ -309,3 +309,5 @@ const mixObject = twoObject;
 mixObject(person, book);
 
 // ostatnie zadanie troszkę dodałem od siebie :)
+
+// console.log("test");
