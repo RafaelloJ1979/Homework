@@ -52,22 +52,19 @@ const array = [1, 2, 3];
 function nowaTablica(first) {
   return first;
 }
-const tablicaX = nowaTablica;
-tablicaX(array);
+const tablicaX = nowaTablica(array);
+console.log(tablicaX);
 
 /* b) zwracającą drugą wartość przekazanej do funkcji tablicy 3 elementowej, */
 
+const array2 = ["a1", "a2", "a3"];
+
 function nowaTablica2(first2) {
+  console.log(first2[1]);
   return first2[1];
 }
-const array2 = ["a1", "a2", "a3"];
-const tab2 = nowaTablica2;
-tab2(array2);
-
-/* console.log(array2);
-console.log(array2[0]);
+const tab2 = nowaTablica2(array2);
 console.log(array2[1]);
-console.log(array2[2]); */
 
 /* c) zwracającą stringa 'Przekazana tablica ma x elementów, a elementem nr 3 jest x' */
 
@@ -80,13 +77,13 @@ tabThree(arrayThree);
 
 /* d) dodaje elementy do stworzonej na zewnątrz funkcji pustej tablicy i zwraca już zmienioną tablice z dodatkowym elementem, */
 
-function tabOne(tab1) {
-  return tab1;
+let arr2 = [];
+function addToArr(newElement) {
+  arr2.push(...newElement);
+  return arr2;
 }
-let cleanerTab = [];
-let addTab = tabOne;
-cleanerTab.push(555, "String", true);
-addTab(cleanerTab);
+addToArr([1, 2, 3, "a", "test"]);
+console.log(arr2);
 
 /* e) zwracającą imię osoby przekazanej w obiekcie(powinien zawierać imię, nazwisko i wiek) do funkcji, */
 
@@ -122,10 +119,10 @@ let personX = {
   age: 25,
 };
 function mixValue(obj, wiek) {
-  return (personX.age = 5);
+  return (obj.age = wiek);
 }
-mixValue(personX, "wiek obiektu");
-/* console.log(personX) */
+mixValue(personX, 20);
+console.log(personX.age + " lat");
 
 // 3. Napisz funkcje (warunki if, else - typy proste):
 
@@ -185,17 +182,23 @@ number(5);
 //    pokaże 'Fizz', jak podzielna jest przez 5 to 'Buzz', a jak przez 3 i 5 to 'FizzBuzz',
 
 function divisible(number) {
-  if (number % 3 === 0 && number % 5 === 0 && number > 0) {
+  if (number % 3 === 0 && number % 5 === 0) {
     console.log(`FizzBuzz`);
-  } else if (number % 3 === 0 && number > 0) {
+  } else if (number % 3 === 0) {
     console.log(`Fizz`);
-  } else if (number % 5 === 0 && number > 0) {
+  } else if (number % 5 === 0) {
     console.log(`Buzz`);
   } else {
     console.log(`buum!!`);
   }
 }
+divisible(-1);
 divisible(0);
+divisible(1);
+divisible(2);
+divisible(3);
+divisible(5);
+divisible(15);
 
 //  e) napisz funkcję, która wyświetla czy osoba może obejrzeć film dla osób 15+, funkcja
 //    powinna przyjąć dwa argumenty, wiek danej osoby i to czy ma zgodę rodziców, jeśli
@@ -237,22 +240,30 @@ evenOdd(10);
 //  a) która przyjmuje obiekt car(model, marka, rok produkcji, isCabrio) i jeśli rok produkcji jest większy niż aktualny rok to informacja, ze auta jeszcze nie wyprodukowano,jak będzie rok poniżej aktualnego to wyświetlamy w zdaniu ładnie informacje o aucie + informacje czy jest Cabrio czy nie jest,
 
 let car = {
-  marka: "Audi ",
+  brand: "Audi ",
   model: "R8 Spyder",
-  yearOfProduction: 2015,
+  year: 2019,
   isCabrio: true,
 };
 
 function newCar(theObject) {
-  console.log(
-    theObject < 2015
-      ? "auta jeszcze nie wyprodukowano"
-      : "Audi R8 Spyder z 2015 roku to sportowe auto w wersji cabrio : " +
-          car.isCabrio
-  );
+  if (theObject.year >= 2021) {
+    console.log("auta jeszcze nie wyprodukowano");
+    return `auta jeszcze nie wyprodukowano`;
+  } else if (theObject.year < 2021 && theObject.isCabrio === true) {
+    console.log(
+      `Dostępne jest auto marki ${theObject.brand},model : ${theObject.model} z roku ${theObject.year} w wersji cabrio : ${theObject.isCabrio} `
+    );
+    return `Dostępne jest auto marki ${theObject.brand},model : ${theObject.model} z roku ${theObject.year} w wersji cabrio : ${theObject.isCabrio} `;
+  } else {
+    console.log(
+      `Brak dostępnej wersji auta marki ${theObject.brand},model : ${theObject.model} z roku ${theObject.year} w wersji cabrio : ${theObject.isCabrio} `
+    );
+    return `Brak dostępnej wersji auta marki ${theObject.brand},model : ${theObject.model} z roku ${theObject.year} w wersji cabrio : ${theObject.isCabrio} `;
+  }
 }
-const takeOver = newCar;
-takeOver(2016);
+let takeOver = newCar;
+newCar(car);
 
 //  b) która przyjmuje tablicę jako parametr z dowolna liczbą elementów, jeśli tablica
 //    jest pusta to zwracamy string pusta tablica, a jak nie to mamy zwrócić stringa
@@ -295,7 +306,15 @@ function twoObject(one, two) {
   if (one.lubiKsiążki === true) {
     alert("Lubisz książki ? ");
     while (one != "y") one = prompt(" press " + "_ y _ " + " -> yes");
-    console.log("Cześć " +one.name +" , polecam Ci przeczytać ksiązkę " +two.tytuł +", ma tylko " +two.ilośćStron +" stron :) ,");
+    console.log(
+      "Cześć " +
+        one.name +
+        " , polecam Ci przeczytać ksiązkę " +
+        two.tytuł +
+        ", ma tylko " +
+        two.ilośćStron +
+        " stron :) ,"
+    );
   } else if (one.lubiKsiążki !== true && one.maTV === true) {
     alert("Nie lubisz książek ! ");
     while (one != "n") one = prompt(" press " + "_ n _ " + " -> no");
