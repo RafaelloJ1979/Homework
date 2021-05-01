@@ -1,8 +1,8 @@
 // zadanie 1:
 //w formie obiektu
 
-function viewCar(auto) {
-  auto = auto || car; //domyślne wartości przy wywołaniu //
+function viewCar(auto=car) {
+  // auto = auto || car; //domyślne wartości przy wywołaniu //
   console.log(
     `samochód marki ${auto.mark}, model: ${auto.model} z ${auto.yearProd} roku`
   );
@@ -17,10 +17,10 @@ viewCar(car);
 
 //w formie listy
 
-function viewCar(marka, model, rokProdukcji) {
-  marka = marka || car.mark; //domyślne wartości przy wywołaniu //
-  model = model || car.model; //domyślne wartości przy wywołaniu //
-  rokProdukcji = rokProdukcji || car.yearProd; //domyślne wartości //
+function viewCar(marka = car.mark, model = car.model, rokProdukcji=car.yearProd) {
+  // marka = marka || car.mark; //domyślne wartości przy wywołaniu //
+  // model = model || car.model; //domyślne wartości przy wywołaniu //
+  // rokProdukcji = rokProdukcji || car.yearProd; //domyślne wartości //
 
   console.log(
     `samochód marki: ${marka} model: ${model} z roku ${rokProdukcji}`
@@ -54,7 +54,8 @@ function viewCar(auto) {
   /*  return `samochód marki ${mark}, model: ${model} z ${yearProd} roku` */
   return auto;
 }
-viewCar();
+viewCar(car);
+
 
 //zad 4
 
