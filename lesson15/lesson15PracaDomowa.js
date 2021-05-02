@@ -1,4 +1,5 @@
 // zad 1
+
 // a) wyświetli wartości od 1 do 9,
 console.log('\n', 'Z A D A N I E : 1 a', '\n')
 
