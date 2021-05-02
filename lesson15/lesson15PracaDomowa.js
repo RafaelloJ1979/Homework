@@ -1,54 +1,65 @@
 // zad 1
 // a) wyświetli wartości od 1 do 9,
 console.log('\n', 'Z A D A N I E : 1 a', '\n')
+
 for (let i = 0; i < 10; i++) {
-    console.log(i)
+    console.log("wartość", i)
 }
 // b) wyświetli wartości od 9 do 1,
 console.log('\n', 'Z A D A N I E : 1 b', '\n')
+
 for (let i = 9; i > 0; i--) {
-    console.log(i)
+    console.log("wartość", i)
 }
 // c) wyświetli wartości od 5 do 15,
 console.log('\n', 'Z A D A N I E : 1 c', '\n')
+
 for (let i = 5; i <= 15; i++) {
-    console.log(i)
+    console.log("wartość", i)
 }
 // d) wyświetli wartości od 0 do -10,
 console.log('\n', 'Z A D A N I E : 1 d', '\n')
+
 for (let i = 0; i >= -10; i--) {
-    console.log(i)
+    console.log("wartość", i)
 }
 // e) wyświetli wartości od 1 do 20 zwiększając się co 2 w każdej iteracji,
 console.log('\n', 'Z A D A N I E : 1 e', '\n')
+
 for (let i = 1; i <= 20; i += 2) {
-    console.log(i)
+    console.log("wartość", i)
 }
 // f) wyświetli wartości od 10 do -10 zmniejszając się o 4 w każdej iteracji,
 console.log('\n', 'Z A D A N I E : 1 f', '\n')
+
 for (let i = 10; i >= -10; i -= 4) {
-    console.log(i)
+    console.log("wartość", i)
 }
 // g) wyświetli wartości od 1 do 100 zwiększając liczbę co iterację mnożąc ją razy 2,
 console.log('\n', 'Z A D A N I E : 1 g', '\n')
+
 for (let i = 1; i < 100; i *= 2) {
-    console.log(i)
+    console.log("wartość", i)
 }
 // zad 2
+
 // a) wyświetli wartości od 0 do 20, ale tylko liczby parzyste,
 console.log('\n', 'Z A D A N I E : 2 a', '\n')
+
 for (let i = 0; i <= 20; i++) {
     if (i % 2 === 0)
-        console.log(i)
+        console.log("wartość", i)
 }
 // b) wyświetli wartości od 0 do 20, ale tylko liczby nieparzyste,
 console.log('\n', 'Z A D A N I E : 2 b', '\n')
+
 for (let i = 0; i <= 20; i++) {
     if (i % 2 !== 0)
-        console.log(i)
+        console.log("wartość", i)
 }
 // c) wyświetli wartości od 0 do 10, ale tam gdzie jest liczba parzystą pokaże napis liczba parzysta, a tam gdzie nie niech wyświetli napis liczba nieparzysta,
 console.log('\n', 'Z A D A N I E : 2 c', '\n')
+
 for (let i = 0; i <= 20; i++) {
     console.log(i % 2 === 0 ? `parzysta ${i}` : `nieparzysta ${i}`)
 }
@@ -56,6 +67,7 @@ for (let i = 0; i <= 20; i++) {
 // pokaże Buzz, a tam gdzie przez 3 i 5 niech wyświetli FizzBuzz, w reszcie przypadków niech pokaże po prostu cyfry,
 // obok niech napis "- podzielna przez 10",
 console.log('\n', 'Z A D A N I E : 2 d', '\n')
+
 for (i = 0; i <= 30; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
         console.log(`FizzBuzz`, i)
@@ -70,6 +82,7 @@ for (i = 0; i <= 30; i++) {
 // e) wyświetli liczby od 100 do 0, ale zmniejszając się o 5 co iteracje i jak liczba jest podzielna przez 10 to niech doda
 // obok niech napis "- podzielna przez 10",
 console.log('\n', 'Z A D A N I E : 2 e', '\n')
+
 for (i = 100; i >= 0; i -= 5) {
     if (i % 10 === 0) {
         console.log(i, "Podzielna przez 10")
@@ -78,12 +91,13 @@ for (i = 100; i >= 0; i -= 5) {
     }
 }
 // // zad 3 Napisz funkcje, która:
+
 // a) przyjmuje jako parametr liczbe do której wykona się pętla od 0,
 console.log('\n', 'Z A D A N I E : 3 a', '\n')
 
 function startLoop(startNumber) {
     for (let i = 0; i <= startNumber; i++) {
-        console.log(i, 'zad 3a')
+        console.log(i)
     }
 }
 startLoop(10)
@@ -92,7 +106,7 @@ console.log('\n', 'Z A D A N I E : 3 b', '\n')
 
 function strartLoop15(startNumber) {
     for (let i = startNumber; i <= 15; i++)
-        console.log('zad 3b', i)
+        console.log(i)
 }
 strartLoop15(12)
 // c) przyjmuje jako parametr liczbę wskazującą o ile ma się zwiększać pętla co iteracje i wyświetla taką pętle od 0 do 15,
@@ -124,6 +138,7 @@ function startStopIncreaseLoop(start, stop, increase) {
 startStopIncreaseLoop(1, 10, 2)
 
 //zad 4  Napisz funkcje, która:
+
 // a) stwórz tablice 5 elementową i za pomocą pętli wypisz wszystkie jej elementy,
 console.log('\n', 'Z A D A N I E : 4 a', '\n')
 
@@ -150,7 +165,7 @@ function displayString() {
 }
 displayString()
 
-// ewentualnie
+// lub?
 // const tabName = ["Adam", "Ewa", "Jacek", "Agata"]
 
 // function displayString() {
@@ -234,6 +249,7 @@ function checkTableTwo(stringDisplay) {
 checkTableTwo(mixTable2)
 
 // zad 5    // Napisz funkcję, która:  
+
 // a) przyjmuje tablicę liczb jako parametr i liczy sume elementów tej tablicy,
 console.log('\n', 'Z A D A N I E : 5 a', '\n')
 
@@ -281,14 +297,19 @@ function giveMeString(string) {
 }
 giveMeString(text)
 
-
-
 // d) przyjmuje liczbę jako parametr i wyświetla wynik mnożenia jej razy cyfry pomniejszone o 1 aż do 1 ego, np.
 // countResult(4) // 4 * 3 * 2 * 1 = 24
 // // Przykładowy wynik
 // // 24
 console.log('\n', 'Z A D A N I E : 5 d', '\n')
 
+function reduce(num) {
+    for (let i = num - 1; i >= 1; i--) {
+        num *= i;
+    }
+    console.log(num);
+}
+reduce(5);
 
 // e) Przyjmuje tablicę jako jeden parametr i string "number"
 // lub "string"
@@ -311,7 +332,6 @@ function takesTheNumberAndTheText(tab = 1, string) {
     }
 }
 takesTheNumberAndTheText(arrayOne, 55)
-
 
 // f) przyjmuje jako parametr tablicę obiektów.W każdym obiekcie powinno znajdować się: name, lastName, hasCar, hasDrivingLicence.Niech będzie
 // to tablica z 4 osobami.Stwórz funkcję które przyjmie taką tablicę jako parametr i sprawdzi nam kto ma prawo jazdy i samochód i kto może Cię
@@ -362,3 +382,22 @@ showMeWho(footballers)
 // g) przyjmuje jako parametr tablice i nowy element do tablicy.Funkcja ta powinna przeiterować tablice sprawdzając czy już taki element w niej jest
 // jeśli go nie ma to dodać do tablicy, a jak jest to wyświetlić odpowiedni komunikat,
 console.log('\n', 'Z A D A N I E : 5 g', '\n')
+
+let tableString = ["one", "two", "three", "four", "five"]
+
+function addToTable(tabOne, newElement) {
+
+    for (let i = 0; i < tabOne.length; i++) {
+        i = newElement
+        if (tabOne.includes(newElement) !== newElement.includes(newElement)) {
+
+            console.log(`Dodano do tablicy element, ${newElement}`)
+            tabOne.push(newElement)
+        } else {
+            console.log(`W tablicy juz jest element : ${newElement}`)
+        }
+    }
+}
+addToTable(tableString, "xxx")
+
+console.log(tableString)
