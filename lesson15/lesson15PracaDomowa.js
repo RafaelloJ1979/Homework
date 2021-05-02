@@ -377,3 +377,5 @@ function addToTable(tabOne, newElement) {
 addToTable(tableString, "xxx")
 
 console.log(tableString)
+
+// ostatnie zadanie :) 
