@@ -374,7 +374,7 @@ function addToTable(tabOne, newElement) {
         }
     }
 }
-addToTable(tableString, "xxx")
+addToTable(tableString, "six")
 
 console.log(tableString)
 
