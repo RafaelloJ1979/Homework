@@ -12,6 +12,13 @@ function convert(minuty) {
 }
 convert(5);
 
+// godziny na sekundy
+function convert(godzina) {
+  console.log(godzina * 60 * 60)
+  return godzina * 60 * 60;
+}
+convert(1);
+
 /* Zwróć następną liczbę z podanej liczby */
 function dodaj(number) {
   console.log(++number);
@@ -63,7 +70,8 @@ console.log("pierwszy element tablicy to " + tabOne);
 
 /* Utworzyć funkcję, która pobiera voltagei currenti zwraca obliczoną moc .
   
-   */ function power(
+   */
+function power(
   a,
   b
 ) {
@@ -86,15 +94,15 @@ function area(height, weight) {
   if (height <= 1 || weight <= 1) {
     console.log(
       " height lub weight jest mniejsze lub równe 1 " +
-        "wynik = " +
-        height * weight
+      "wynik = " +
+      height * weight
     );
     return height * weight;
   } else {
     console.log(
       "height lub weight jest większe niż: 1 " +
-        "height * weight = " +
-        height * weight
+      "height * weight = " +
+      height * weight
     );
     return height * weight;
   }
