@@ -9,11 +9,19 @@ addThreNumber(5, 10, 15);
 
 /*b) zwracającą pole trójkąta ze wzoru podstawa * wysokość / 2, która zwróci'Pole trójkąta to x(zmienna tu powinna być), czyli ma on x długości podstawy i x wysokości' */
 
+// function triArea(podstawa, wysokość) {
+//   console.log((podstawa * wysokość) / 2);
+//   return `Pole trójkąta to ${(podstawa * wysokość) / 2}`;
+// }
+// triArea(7, 5);
+//lub
 function triArea(podstawa, wysokość) {
-  console.log((podstawa * wysokość) / 2);
-  return `Pole trójkąta to ${(podstawa * wysokość) / 2}`;
+  let a = podstawa
+  let b = wysokość
+  console.log(`Pole trójkąta to ${a* b / 2}`)
+  return (`Pole trójkąta to ${a* b / 2}`)
 }
-triArea(7, 5);
+triArea(5, 7)
 /* lub przez przekazanie do funkcji 
 const poletrójkąta = triArea poletrójkąta(12, 5) */
 
@@ -95,11 +103,27 @@ let person = {
   name: "Hans",
   surname: "Kloss",
 };
+
 function returnObject(par1) {
+  console.log(par1.name)
   return par1.name;
 }
-let transfer = returnObject;
-transfer(person);
+let transfer = returnObject(person)
+
+// lub 
+let person = {
+  age: 55,
+  name: "Hans",
+  surname: "Kloss",
+};
+
+function returnObject(par1) {
+  /* console.log(par1.name) */
+  return par1
+}
+
+let wynik = returnObject(person.name);
+console.log(wynik)
 
 /*  f) zwracającą stringa 'imię(tu zmienna) i nazwisko(tu zmienna) ma x(tu zmienna) lat i x(tu zmienna) cm wzrostu' */
 
@@ -113,18 +137,21 @@ let person2 = {
 function giveMeString(par) {
   return `${par.name} ${par.surname} ma lat ${par.age} i ${par.increase} cm wzrostu`;
 }
-let runFunc = giveMeString;
-runFunc(person2);
+let runFunc = giveMeString(person2)
+console.log(runFunc)
 
 /* g) przyjmującą dwa parametry jeden do obiekt a drugi to wiek, i zwracającą zmieniony wiek, czyli wiek który przekazujemy w parametry zamieniamy z wiekiem w obiekcie, */
 
 let personX = {
   age: 25,
 };
+
 function mixValue(obj, wiek) {
-  return (personX.age = 5);
+  return (obj.age = wiek);
 }
-mixValue(personX, "wiek obiektu");
+console.log('before', personX.age)
+mixValue(personX, 22)
+console.log('after', personX.age)
 /* console.log(personX) */
 
 // 3. Napisz funkcje (warunki if, else - typy proste):
