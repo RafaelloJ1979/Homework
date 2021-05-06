@@ -52,16 +52,18 @@ for (let i = 1; i < 100; i *= 2) {
 console.log('\n', 'Z A D A N I E : 2 a', '\n')
 
 for (let i = 0; i <= 20; i++) {
-    if (i % 2 === 0)
+    if (i % 2 === 0) {
         console.log("wartość", i)
+    }
 }
 
 // 2 b) 
 console.log('\n', 'Z A D A N I E : 2 b', '\n')
 
 for (let i = 0; i <= 20; i++) {
-    if (i % 2 !== 0)
+    if (i % 2 !== 0) {
         console.log("wartość", i)
+    }
 }
 
 // 2 c) 
@@ -110,16 +112,18 @@ startLoop(10)
 console.log('\n', 'Z A D A N I E : 3 b', '\n')
 
 function strartLoop15(startNumber) {
-    for (let i = startNumber; i <= 15; i++)
+    for (let i = startNumber; i <= 15; i++) {
         console.log(i)
+    }
 }
 strartLoop15(12)
 // 3 c)
 console.log('\n', 'Z A D A N I E : 3 c', '\n')
 
 function startLoopHowMuchToIncrase(increase) {
-    for (let i = 0; i <= 15; i += increase)
+    for (let i = 0; i <= 15; i += increase) {
         console.log(i)
+    }
 }
 startLoopHowMuchToIncrase(5)
 
@@ -245,7 +249,11 @@ console.log('\n', 'Z A D A N I E : 5 a', '\n')
 const tabFirst = [1, 2, 3, 4, 5]
 
 function sumArray(addUp) {
-    console.log("ilość elementów tablicy to :", addUp.length)
+    let wynik = 0
+    for (let i = 0; i < addUp.length; i++) {
+        wynik += addUp[i]
+    }
+    console.log("ilość elementów tablicy to :", wynik)
 }
 sumArray(tabFirst)
 
@@ -272,18 +280,28 @@ evenAndOdd(tabNumber)
 
 // 5 c) 
 console.log('\n', 'Z A D A N I E : 5 c', '\n')
-
-let text = "yes yes"
-
+//poprawione zadanie
 function giveMeString(string) {
-    for (let i = 0; i < string.length; i++)
-        if (string[i] === "y") {
-            console.log(i, "Jest!")
-        } else {
-            console.log(i, "Nie ma!")
-        }
+    if (string.includes("y")) {
+
+        console.log("Jest!")
+    } else {
+        console.log("Nie ma!")
+    }
 }
-giveMeString(text)
+giveMeString("yes")
+giveMeString("no")
+
+// let text = "yes yes"
+// function giveMeString(string) {
+//     for (let i = 0; i < string.length; i++)
+//         if (string[i] === "y") {
+//             console.log(i, "Jest!")
+//         } else {
+//             console.log(i, "Nie ma!")
+//         }
+// }
+// giveMeString(text)
 
 // 5 d) 
 console.log('\n', 'Z A D A N I E : 5 d', '\n')
@@ -338,7 +356,7 @@ const footballers = [
     {
         name: "Cristiano",
         lastName: "Ronaldo",
-        hasCar: true,
+        hasCar: false,
         hasDriveinLicence: true
     },
 ]
@@ -349,6 +367,8 @@ function showMeWho(view) {
             console.log(`Z imprezy możesz wrócić z ${view[i].name} ${view[i].lastName}, poniewż posiada auto i prawo jazdy`)
         } else if (view[i].hasCar === true && view[i].hasDriveinLicence === false) {
             console.log(`${view[i].name} ${view[i].lastName} posiada auto lecz nie ma prawa jazdy `)
+        } else if (view[i].hasCar === false && view[i].hasDriveinLicence === true) {
+            console.log(`${view[i].name} ${view[i].lastName} nie ma auta ale ma prawko`)
         } else {
             console.log(`${view[i].name} ${view[i].lastName} nie ma auta i papierów`)
         }
