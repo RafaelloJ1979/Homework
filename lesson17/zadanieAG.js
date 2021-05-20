@@ -151,10 +151,48 @@ function pokazZadanieF(obj, kwota) {
         par2 = kwota
         return par1.cena * 7 <= par2
     })
-    console.log(`W podanej kwocie ,możemy wypożyczyć te auta na 7 dni`)
+    console.log(`W podanej kwocie ,możemy wypożyczyć takie auta na 7 dni`)
     return newArray1
 }
 const sevenDaysRent = pokazZadanieF(rentalCarCompany, 3500)
 console.log(sevenDaysRent)
 
 console.log('\n', 'odp.  G', '\n');
+
+function pokazZadanieG(obj) {
+    const newArray = obj.map(function (par) {
+        const wynik = par.carsToRent / par.allCarsNumber * 100
+        return {
+            ...par,
+            procentowaIloscAut: wynik.toFixed(0)
+        }
+    }).sort(function (par1, par2) {
+        return par1.procentowaIloscAut - par2.procentowaIloscAut
+    }).filter(function (par1, index) {
+        return index < 3
+    })
+    console.log(`stosunek aut wypozyczonych do dostępnych `);
+    return newArray
+}
+const sortujDostepnoscAutzadG = pokazZadanieG(rentalCarCompany);
+console.log(sortujDostepnoscAutzadG);
+
+
+
+// function pokazZadanieG(obj) {
+//     const newArray = obj.map(function (par) {
+//         const wynik = par.carsToRent / par.allCarsNumber * 100
+//         return {
+//             ...par,
+//             procentowaIloscAut: wynik.toFixed(0)
+//         }
+//     }).sort(function (par1, par2) {
+//         return par1.procentowaIloscAut - par2.procentowaIloscAut
+//     }).filter(function (par1, index) {
+//         return index < 3
+//     })
+//     console.log(`stosunek aut wypozyczonych do dostępnych `);
+//     return newArray
+// }
+// const sortujDostepnoscAut = pokazZadanieG(rentalCarCompany);
+// console.log(sortujDostepnoscAut);
