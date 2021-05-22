@@ -243,14 +243,14 @@ function Car(model, yearOfProduction, color) {
     this.yearOfProduction = yearOfProduction;
     this.color = color;
     this.drive = function (par) {
-        console.log(`Wybrane auto `)
-    }
-}
+        console.log(`Wybrane auto `);
+    };
+};
 
 const audi = new Car('Audi TT', '2016', 'red');
-const bmw = new Car('BMW Z4', '2015', 'blue')
-console.log(audi)
-console.log(bmw)
+const bmw = new Car('BMW Z4', '2015', 'blue');
+console.log(audi);
+console.log(bmw);
 
 console.log('\n odp.  zad 17 ', '\n ');
 
@@ -262,8 +262,8 @@ console.log('\n odp.  zad 18 ', '\n ');
 
 // Za pomocą prototype dodaj dwie funkcje do konstruktora car, tankFuel i stop, które będą wypisywać w konsoli dowolny napis,
 
-Car.prototype.tankFuel = (car, text) => console.log(car, text)
-Car.prototype.stop = (car, text) => console.log(car, text)
+Car.prototype.tankFuel = (car, text) => console.log(car, text);
+Car.prototype.stop = (car, text) => console.log(car, text);
 
-audi.tankFuel(audi.model, `...Kończy się palwio ! zatankuj auto !`)
-bmw.stop(bmw.model, "... Awaria ! zatrzymaj auto !")
+audi.tankFuel(audi.model, `...Kończy się palwio ! zatankuj auto !`);
+bmw.stop(bmw.model, "... Awaria ! zatrzymaj auto !");
