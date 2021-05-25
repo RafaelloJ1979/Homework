@@ -4,25 +4,18 @@ console.log('\n odp.  zad 1', '\n');
 
 //  zad 1 : funkcja strzałkowa ... zwróć sumę wszystkich elementów znajdujących się w tablicy,
 
-const sumArray = array.reduce((prev, next) => prev + next);
-console.log('ver 1 : suma elementów tablicy to', sumArray);
-
-// zad 1 // funkcja 
-
-const newArr1 = array.reduce(function (acc, value) {
-    return acc + value;
+const sumArray = array.reduce((acc, next) => {
+   return acc + next
 });
-console.log('ver 2 : suma elementów tablicy to', newArr1);
+console.log('ver 1 : suma elementów tablicy to', sumArray);
 
 console.log('\n odp. zad 2 ', '\n');
 
 //  zad 2 ver 1: funkcja strzałkowa ... zwróć sumę wszystkich parzystych elementów tablicy,
-
+// ver 1
 const sumEven = array.filter(item => item % 2 === 0).reduce((acc, value) => acc + value);
 console.log('ver 1 , suma parzystych elementów tablicy to', sumEven);
-
-//  zad 2 : ver2 ... zwróć sumę wszystkich parzystych elementów tablicy,
-
+// ver 2
 const sumEven2 = array.filter(function (item) {
     return item % 2 === 0;
 }).reduce(function (acc, value) {
@@ -34,9 +27,9 @@ console.log('\n odp.  zad 3 ', '\n');
 
 // zad 3 : zwróć sumę wszystkich elementów tablicy + 10(10 dodaj za pomocą initialValue)
 
-const sumEvenZad3 = array.reduce(function (acc, value) {
-    return acc + value;
-}, 10);
+const sumEvenZad3 = array.reduce((acc, next) => {
+    return acc + next;
+},10);
 console.log(`suma wszystkich elementów tablicy array + 10 :`, sumEvenZad3);
 
 console.log('\n odp.  zad 4 ', '\n ');
@@ -49,7 +42,7 @@ console.log('\n odp.  zad 5 ', '\n ');
 
 // zad 5 : Jeśli podamy initialValue w tablicy to jaki index będzie miał prawdziwy pierwszy element naszej tablicy ?
 
-console.log(`Jeśli podamy wartość początkową to oryginalny index tablicy będzie 1 `);
+console.log(`Jeśli podamy wartość początkową to oryginalny index tablicy będzie `,1);
 
 console.log('\n odp.  zad 6 ', '\n ');
 
@@ -75,12 +68,11 @@ const number = 55
 const wynikZad7 = someArray.some((item) => item > number)
 console.log(`someArray ${someArray} zawiera element większy niż ${number} `, wynikZad7)
 
-
 console.log('\n odp.  zad 8 : every ', '\n ');
 
 const numberZad8 = 2
 const wynikZad8 = someArray.every((item) => item > numberZad8)
-console.log(`Czy kazdy element tablicy ${someArray} jest większy niż ${numberZad8}`, wynikZad8)
+console.log(`Czy kazdy element tablicy ${someArray} jest większy niż`, numberZad8, `:`, wynikZad8)
 
 console.log('\n odp.  zad 9 some i every ', '\n ');
 
@@ -96,7 +88,7 @@ console.log('\n odp.  zad 10', '\n ');
 
 const divisible = 7
 const checkNumberZad10 = someArray.some((item) => item % divisible === 0);
-console.log(`tablica ${someArray} zawiera elementy podzielne przez ${divisible}`, checkNumberZad10)
+console.log(`tablica ${someArray} zawiera elementy podzielne przez `, divisible, `:`,checkNumberZad10)
 
 
 console.log('\n odp.  zad 11', '\n ');
@@ -165,22 +157,11 @@ const sprawdz = checkNumber(arrZad12, 26);
 console.log(sprawdz);
 
 // ver 2
-function every(array, num) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] > num) {
-            console.log(`ver 2 :`, arrZad12, `Elementy tablicy są większe niż `, num, );
-            return true;
-        };
-    };
-    return false;
-};
-console.log(every(arrZad12, 20))
 
-//ver 3
 const num = 11;
 const check = arrZad12.every(parametr => parametr > num)
-console.log(`ver 3 :`, arrZad12, "elementy tablicy są mniejsze niż", num)
 
+console.log(`ver 3 :`, arrZad12, "elementy tablicy są mniejsze niż", num)
 
 function every2(array) {
     for (let i = 0; i < array.length; i++) {
