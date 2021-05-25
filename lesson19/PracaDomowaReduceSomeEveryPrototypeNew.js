@@ -71,18 +71,16 @@ console.log('\n odp.  zad 7 some i every ', '\n ');
 
 const someArray = [11, 3, 5, 31, 31, 54, 23, 14]
 
-someArray.some(function (item, index, array) {
-    if (item > 50) {
-        console.log(`someArray zawiera element większy niż 50`, item > 50);
-        return item > 50;
-    };
-});
+const number = 55
+const wynikZad7 = someArray.some((item) => item > number)
+console.log(`someArray ${someArray} zawiera element większy niż ${number} `, wynikZad7)
+
 
 console.log('\n odp.  zad 8 : every ', '\n ');
 
-someArray.every(function (item, index, array) {
-    return console.log(`Czy kazdy element tablicy (someArray) jest większy niż 2 ? `, item > 2);
-})
+const numberZad8 = 2
+const wynikZad8 = someArray.every((item) => item > numberZad8)
+console.log(`Czy kazdy element tablicy ${someArray} jest większy niż ${numberZad8}`, wynikZad8)
 
 console.log('\n odp.  zad 9 some i every ', '\n ');
 
@@ -96,12 +94,10 @@ console.log('\n odp.  zad 10', '\n ');
 
 // sprawdz czy tablica zawiera element podzielny przez 7 i jeśli tak to niech wyświetli w konsoli informacje, że w tablicy znajduje się element podzielny przez 7, //
 
-someArray.some(function (item, index, tablica) {
-    if (item % 7 === 0) {
-        console.log(`tablica (someArray) zawiera elemnty podzielne przez 7 : `, item);
-        return item % 7 === 0;
-    };
-});
+const divisible = 7
+const checkNumberZad10 = someArray.some((item) => item % divisible === 0);
+console.log(`tablica ${someArray} zawiera elementy podzielne przez ${divisible}`, checkNumberZad10)
+
 
 console.log('\n odp.  zad 11', '\n ');
 
@@ -120,11 +116,25 @@ function some(array, number) {
 }
 console.log(`ver 1 : fn some  `, some(arrZad11, 17));
 
-// ver 2 jak na live 21
+// ver 2
+
+const numberZad11 = 19
+
+function some2(array) {
+    for (let i = 0; i < arrZad11.length; i++) {
+        if (array[i] > number) {
+            return true;
+        }
+        return false;
+    }
+}
+console.log(`ver 2 : elementy tablicy są większe niż ${number}`, some2(arrZad11));
+
+// ver 3 jak na live 21
 
 const biggerThan10 = arrZad11.some(number => number >= 10);
 
-function some2(array) {
+function some3(array) {
     for (let i = 0; i < this.length; i++) {
         const number = this[i];
         if (array(number)) {
@@ -133,7 +143,7 @@ function some2(array) {
         return false;
     }
 }
-console.log(`ver 2 : fn some2 `, biggerThan10);
+console.log(`ver 3 : fn some2 `, biggerThan10);
 
 console.log('\n odp.  zad 12 ', '\n ');
 
@@ -154,13 +164,25 @@ function checkNumber(array, number) {
 const sprawdz = checkNumber(arrZad12, 26);
 console.log(sprawdz);
 
-//ver 2
+// ver 2
+function every(array, num) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > num) {
+            console.log(`ver 2 :`, arrZad12, `Elementy tablicy są większe niż `, num, );
+            return true;
+        };
+    };
+    return false;
+};
+console.log(every(arrZad12, 20))
+
+//ver 3
 const num = 11;
 const check = arrZad12.every(parametr => parametr > num)
-{
-    console.log(`ver 2 =>`, arrZad12, "elementy tablicy są mniejsze niż", num)
-}
-function every(array) {
+console.log(`ver 3 :`, arrZad12, "elementy tablicy są mniejsze niż", num)
+
+
+function every2(array) {
     for (let i = 0; i < array.length; i++) {
         const parametr = array[i];
         if (array(parametr)) {
@@ -195,7 +217,7 @@ console.log('\n odp.  zad 14 ', '\n ');
 
 // przyjmuję dwa parametry (tablicę oraz wartość initialValue), a następnie odejmuje nam każdy kolejny element tablicy od następnego,
 
-const arraySubtract = [10, 5, 2, 1, ];
+const arraySubtract = [10, 5, 2, 1];
 
 function mixMethod(par1, initialValue) {
     const storeIt = par1.reduce(function (acc, value) {
