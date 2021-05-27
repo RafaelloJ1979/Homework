@@ -4,10 +4,11 @@ console.log('\n odp.  zad 1', '\n');
 
 //  zad 1 : funkcja strzałkowa ... zwróć sumę wszystkich elementów znajdujących się w tablicy,
 
-const sumArray = array.reduce((acc, next) => {
-   return acc + next
+const sumArray = () => array.reduce((acc, next) => {
+    return acc + next
 });
-console.log('ver 1 : suma elementów tablicy to', sumArray);
+const wynikZad1 = sumArray(array)
+console.log('ver 1 : suma elementów tablicy to', wynikZad1);
 
 console.log('\n odp. zad 2 ', '\n');
 
@@ -29,7 +30,7 @@ console.log('\n odp.  zad 3 ', '\n');
 
 const sumEvenZad3 = array.reduce((acc, next) => {
     return acc + next;
-},10);
+}, 10);
 console.log(`suma wszystkich elementów tablicy array + 10 :`, sumEvenZad3);
 
 console.log('\n odp.  zad 4 ', '\n ');
@@ -42,7 +43,7 @@ console.log('\n odp.  zad 5 ', '\n ');
 
 // zad 5 : Jeśli podamy initialValue w tablicy to jaki index będzie miał prawdziwy pierwszy element naszej tablicy ?
 
-console.log(`Jeśli podamy wartość początkową to oryginalny index tablicy będzie `,1);
+console.log(`Jeśli podamy wartość początkową to oryginalny index tablicy będzie `, 1);
 
 console.log('\n odp.  zad 6 ', '\n ');
 
@@ -197,11 +198,11 @@ console.log(`suma elementów typu number w tablicy to`, wynikZad13)
 
 // v2
 const arrayNumber2 = [5, true, 20, 'test', "string"];
-const sumItems2 = (array) => {
-    const newArray = arrayNumber2.filter((item)=>{
+const sumItems2 = () => {
+    const newArray = arrayNumber2.filter((item) => {
         return typeof item === "number"
     }).reduce((acc, next) => {
-        return acc+next
+        return acc + next
     })
     return newArray
 }
