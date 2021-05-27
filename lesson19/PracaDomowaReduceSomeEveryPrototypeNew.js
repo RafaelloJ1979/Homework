@@ -62,17 +62,17 @@ console.log('\n odp.  zad 7 some i every ', '\n ');
 
 // zad 7 : zwróć true jeśli tablica zawiera chociaż jeden element większy niż 50, 
 
-const someArray = [11, 3, 5, 31, 31, 54, 23, 14]
+const someArray = [11, 3, 5, 31, 31, 54, 23, 14];
 
-const number = 55
-const wynikZad7 = someArray.some((item) => item > number)
-console.log(`someArray ${someArray} zawiera element większy niż ${number} `, wynikZad7)
+const number = 55;
+const wynikZad7 = someArray.some((item) => item > number);
+console.log(`someArray ${someArray} zawiera element większy niż ${number} `, wynikZad7);
 
 console.log('\n odp.  zad 8 : every ', '\n ');
 
-const numberZad8 = 2
-const wynikZad8 = someArray.every((item) => item > numberZad8)
-console.log(`Czy kazdy element tablicy ${someArray} jest większy niż`, numberZad8, `:`, wynikZad8)
+const numberZad8 = 2;
+const wynikZad8 = someArray.every((item) => item > numberZad8);
+console.log(`Czy kazdy element tablicy ${someArray} jest większy niż`, numberZad8, `:`, wynikZad8);
 
 console.log('\n odp.  zad 9 some i every ', '\n ');
 
@@ -86,9 +86,9 @@ console.log('\n odp.  zad 10', '\n ');
 
 // sprawdz czy tablica zawiera element podzielny przez 7 i jeśli tak to niech wyświetli w konsoli informacje, że w tablicy znajduje się element podzielny przez 7, //
 
-const divisible = 7
+const divisible = 7;
 const checkNumberZad10 = someArray.some((item) => item % divisible === 0);
-console.log(`tablica ${someArray} zawiera elementy podzielne przez `, divisible, `:`,checkNumberZad10)
+console.log(`tablica ${someArray} zawiera elementy podzielne przez `, divisible, `:`, checkNumberZad10);
 
 
 console.log('\n odp.  zad 11', '\n ');
@@ -110,7 +110,7 @@ console.log(`ver 1 : fn some  `, some(arrZad11, 17));
 
 // ver 2
 
-const numberZad11 = 19
+const numberZad11 = 19;
 
 function some2(array) {
     for (let i = 0; i < arrZad11.length; i++) {
@@ -161,7 +161,7 @@ console.log(sprawdz);
 const num = 11;
 const check = arrZad12.every(parametr => parametr > num)
 
-console.log(`ver 3 :`, arrZad12, "elementy tablicy są mniejsze niż", num)
+console.log(`ver 2 :`, arrZad12, "elementy tablicy są mniejsze niż", num)
 
 function every2(array) {
     for (let i = 0; i < array.length; i++) {
@@ -184,15 +184,28 @@ const arrayNumber = [25, '123', 7, '555', "string"];
 
 function sumItems(array) {
     const sumArrayNumber = array.filter(function (element) {
-        if (typeof element === "number") {
+        if (typeof element == "number") {
             return element;
         }
     }).reduce(function (prev, next) {
         return prev + next;
     });
-    console.log(`suma elementów typu number w tablicy to`, sumArrayNumber);
+    return sumArrayNumber
 }
-sumItems(arrayNumber);
+const wynikZad13 = sumItems(arrayNumber);
+console.log(`suma elementów typu number w tablicy to`, wynikZad13)
+
+// v2
+const arrayNumber2 = [5, true, 20, 'test', "string"];
+const sumItems2 = (array) => {
+    const newArray = arrayNumber2.filter((item)=>{
+        return typeof item === "number"
+    }).reduce((acc, next) => {
+        return acc+next
+    })
+    return newArray
+}
+console.log(`suma elementów typu number w tablicy to`, sumItems2(arrayNumber2))
 
 console.log('\n odp.  zad 14 ', '\n ');
 
