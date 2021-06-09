@@ -63,3 +63,4 @@ promiseZad5
         console.log('odp zad 5 v2',`Wybrana postać nr ${par} to: ${postac.name}`,postac)
     }
     asynchroZad5(1)
+    

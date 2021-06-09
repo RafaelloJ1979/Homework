@@ -1,5 +1,4 @@
 // **********************   PROJEKT 2 ******************** //
-
 let page = 1;
 let info = null;
 let allPage = ''
@@ -92,7 +91,6 @@ async function main() {
     console.log('char', characters)
 
     characters.results.forEach(stworzKartePostaci)
-
 }
 main()
 
