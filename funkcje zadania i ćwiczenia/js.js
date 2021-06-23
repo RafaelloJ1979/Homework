@@ -149,12 +149,11 @@ sumaKątów(10);
 /* parzysta czu nieparzysta */
 function czyParzysta(liczba) {
   if (liczba % 2 == 0) {
-    alert("Liczba " + liczba + " jest parzysta");
+    console.log("Liczba " + liczba + " jest parzysta");
     return true;
   } else {
-    alert("Liczba " + liczba + " jest nieparzysta");
+    console.log("Liczba " + liczba + " jest nieparzysta");
     return false;
   }
 }
 let wynik = czyParzysta(3);
-console.log(wynik);

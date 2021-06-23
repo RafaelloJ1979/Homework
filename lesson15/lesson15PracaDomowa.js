@@ -1,4 +1,3 @@
-
 // 1 a)
 console.log('\n', 'Z A D A N I E : 1 a', '\n')
 
@@ -319,7 +318,12 @@ console.log('\n', 'Z A D A N I E : 5 e', '\n')
 
 const arrayOne = [10, "555"]
 
-function takesTheNumberAndTheText(tab = 1, string) {
+function takesTheNumberAndTheText(tab, string) {
+
+    if (tab.length == 0) {
+        console.log('Pusta tablica')
+        return
+    }
     for (let i = 0; i < tab.length; i++) {
         if (typeof string === "number" || typeof string === "string") {
             console.log(tab[i] + string)
