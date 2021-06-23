@@ -64,7 +64,7 @@ async function main() {
         $name.innerHTML = data.name
 
         const $species = document.createElement('p')
-        $species.innerHTML = data.$species
+        $species.innerHTML = data.species
 
         $container.appendChild($name)
         $container.appendChild($species)
