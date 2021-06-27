@@ -13,17 +13,17 @@ function mainWrapper() {
         }
     }
     // ok 
-    const $buttonPrev = document.getElementById('prev')
-    const $buttonNext = document.getElementById('next')
-    const $inputFilter = document.getElementById('filter')
-    const $selectStatus = document.getElementById('status')
-    const $buttonClear = document.getElementById('clear')
-
-    $buttonPrev.addEventListener('click', handlePageChangeClick)
-    $buttonNext.addEventListener('click', handlePageChangeClick)
-    $inputFilter.addEventListener('keyup', handleFilterBackend)
-    $selectStatus.addEventListener('cahange', handleFilterStatus)
-    $buttonClear.addEventListener('click', handleClearFilters)
+    const $buttonPrev = document.getElementById("prev");
+    const $buttonNext = document.getElementById("next");
+    const $inputFilter = document.getElementById("filter");
+    const $selectStatus = document.getElementById("status");
+    const $buttonClear = document.getElementById("clear");
+  
+    $buttonPrev.addEventListener("click", handlePageChangeClick);
+    $buttonNext.addEventListener("click", handlePageChangeClick);
+    $inputFilter.addEventListener("keyup", handleFilterBackend);
+    $selectStatus.addEventListener("change", handleFilterStatus);
+    $buttonClear.addEventListener("click", handleClearFilters);
 
     function handleClearFilters() {
         stanAplikacji.filters = {
@@ -33,8 +33,6 @@ function mainWrapper() {
         stanAplikacji.page = 1
 
     }
-    console.log('test')
-
     // ok 
 
     // function handleFilterFrontend(event) {
@@ -49,8 +47,9 @@ function mainWrapper() {
     //     })
     // }
 
-    async function handleFiltersStatus(event) {
-        const { value } = event.target('value', value)
+    async function handleFilterStatus(event) {
+        const { value } = event.target
+        console.log('value',value)
         stanAplikacji.filters.status = value
         const characters = await pobierzPostaci()
         stanAplikacji.info = characters.info
@@ -150,5 +149,5 @@ function mainWrapper() {
 }
 
 
-
+setTimeout(mainWrapper, 10);
 
