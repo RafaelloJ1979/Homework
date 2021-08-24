@@ -56,7 +56,7 @@ async function main() {
     const response = await data.json()
     return response
   }
-
+  
   {/* <div class="card">
   <img src="img_avatar.png" alt="Avatar" style="width:100%">
   <div class="container">

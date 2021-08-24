@@ -62,7 +62,7 @@ const counter = licznik();
 // Główna zasada:
 // Zawsze mamy dostęp do zmiennych zadeklarowanych na zewnątrz. Nigdy tych które są w bloku wewnątrz.
 // Przykład:
-const zmienna1 = ‘test’
+const zmienna1 = 'test'
 
 function licznik() {
 const zmienna2 = 'wSrodkuFunkcji'

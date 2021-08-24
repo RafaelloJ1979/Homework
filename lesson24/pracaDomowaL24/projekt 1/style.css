@@ -8,10 +8,10 @@ span{
     color: dodgerblue;
 }
 #liczba-postaci{
-    color: orangered;
+    color: rgb(170, 45, 0);
 }
 #imie{
-    color:orangered;
+    color:rgb(151, 40, 0);
     font-size: 22px;
 }
 

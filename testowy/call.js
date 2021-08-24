@@ -15,7 +15,8 @@ const personA = {
 const personB = {
     name: 'Tom'
 }
-human.sayName.call(personB)
+human.sayName.call(personA)
+
 const people = [
 
     {
@@ -26,33 +27,33 @@ const people = [
     }
 ]
 
-people.forEach(p => {
-    human.sayName.call(p)
-})
+// people.forEach(p => {
+//     human.sayName.call(p)
+// })
 
 // metoda apply
 
-people.forEach(p => {
-    human.sayFullName.apply(p, ['surname', 55])
-})
+// people.forEach(p => {
+//     human.sayFullName.apply(p, ['surname', 55])
+// })
 
-const human2 = {
-    /*  name: 'Tom', */
-    sayName() {
-        console.log(`My name is ${this.name}`)
-    },
-    sayFullName: function (surname, age) {
-        console.log(`My name is ${this.name} ${surname} lat ${age}`)
-    }
-}
-const person = {
-    name: 'ADam',
-    age: 55,
-    surname: 'Dec'
-}
+// const human2 = {
+//     /*  name: 'Tom', */
+//     sayName() {
+//         console.log(`My name is ${this.name}`)
+//     },
+//     sayFullName: function (surname, age) {
+//         console.log(`My name is ${this.name} ${surname} lat ${age}`)
+//     }
+// }
+// const person = {
+//     name: 'Adam',
+//     age: 55,
+//     surname: 'Dec'
+// }
 
-people.forEach(p => {
-    human2.sayFullName.apply(p, ['Kowalski', 55])
-})
+// people.forEach(p => {
+//     human2.sayFullName.apply(p, ['Kowalski', 55])
+// })
 
 

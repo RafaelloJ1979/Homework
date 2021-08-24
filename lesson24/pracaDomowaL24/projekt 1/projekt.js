@@ -37,7 +37,7 @@ async function main() {
         console.log(`imie z indexu ${par} :`, downolad.results[par].name)
 
     }
-    downoladTenCharacters(0)
+    downoladTenCharacters(5)
 }
 main()
 
