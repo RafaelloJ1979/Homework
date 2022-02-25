@@ -145,4 +145,4 @@ function createLoop(startNumber, condition) {
  
  createLoop(1, 5)
 
- https://github.com/RafaelloJ1979/Devstock-edycja-druga.git
+//  https://github.com/RafaelloJ1979/Devstock-edycja-druga.git
