@@ -62,4 +62,6 @@ button {
 #sposob2i3 {
   display: inline-flex;
   flex-direction: column;
+
+  text-align: right;
 }
