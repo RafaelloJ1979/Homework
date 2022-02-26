@@ -23,7 +23,7 @@ console.log(obliczCene('Odkurzacz' , 1000 ,8))
 obliczCene('Książka JS',100,23)
 
 //Cena produktu Ksiązka JS to 123 pln */
--------------------------------------(
+// -------------------------------------(
   // { name , type , price} )
 
   function obliczCene(obj) {
@@ -51,7 +51,9 @@ const produkt = {
 
 console.log(obliczCene(produkt));
 
----------------------------------function licznik() {
+// ---------------------------------
+
+function licznik() {
   let ile = 0;
 
   function zwieksz() {

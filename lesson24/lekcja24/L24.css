@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(127, 168, 255);
+}
+#prev ,#next{
+    margin: 10px;
+    background-color: rgb(119, 236, 182);
+    width: 100px;
+    /* border: none; */
+}
