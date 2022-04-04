@@ -17,7 +17,9 @@
 // const enemy2 = new Enemy(5, 8);
 // console.log('enemy1', enemy1)
 // console.log('enemy2', enemy2)
+
 // // ----------------------------------- //
+
 // function Person(name, lastName, age, height) {
 //     this.name = name;
 //     this.lastName = lastName;
@@ -31,7 +33,9 @@
 // const Rafał = new Person('Rafał', 'Jaśkowski', 42, 181);
 // console.log('Rafał', Rafał)
 // Rafał.fn()
+
 // // ----------------------------------- //
+
 // function Cars(marka, model, color) {
 //     this.marka = marka;
 //     this.model = model;
@@ -64,6 +68,7 @@
 // console.log(Pawel)
 
 // ----------------------------------- //
+
 //  zadanie do zrobienia 16 ..
 // Stwórz funkcję konstruktora, która stworzy nam obiekt samochód z właściwościami:
 // (model, yearOfProduction, color, drive()) i stwórz dwa samochody tym konstruktorem,

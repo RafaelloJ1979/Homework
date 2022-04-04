@@ -12,172 +12,176 @@
 // Wskaż jakie auta są wypożyczane najczęściej i być może należy zaopatrzyć wypożyczalnie w więcej takich aut ?
 //     (Chodzi o stosunek w danej marce aut dostępnych w wypożyczalni ogólnie i aktualnie, gdzie procentowo zostało ich teraz najmniej) Wskaż 3 najczęściej wypożyczane marki aut.
 
-const rentalCarCompany = [{
-        name: 'audi',
-        allCarsNumber: 70,
-        carsToRent: 30,
-        price: 140,
-    },
-    {
-        name: 'fiat',
-        allCarsNumber: 120,
-        carsToRent: 120,
-        price: 90,
-    },
-    {
-        name: 'bmw',
-        allCarsNumber: 50,
-        carsToRent: 50,
-        price: 430,
-    },
-    {
-        name: 'ferrari',
-        allCarsNumber: 3,
-        carsToRent: 1,
-        price: 1200,
-    },
-    {
-        name: 'mustang',
-        allCarsNumber: 13,
-        carsToRent: 3,
-        price: 650,
-    },
-    {
-        name: 'mercedes',
-        allCarsNumber: 22,
-        carsToRent: 12,
-        price: 340,
-    },
-]
+const rentalCarCompany = [
+  {
+    name: "audi",
+    allCarsNumber: 70,
+    carsToRent: 30,
+    price: 140,
+  },
+  {
+    name: "fiat",
+    allCarsNumber: 120,
+    carsToRent: 120,
+    price: 90,
+  },
+  {
+    name: "bmw",
+    allCarsNumber: 50,
+    carsToRent: 50,
+    price: 430,
+  },
+  {
+    name: "ferrari",
+    allCarsNumber: 3,
+    carsToRent: 1,
+    price: 1200,
+  },
+  {
+    name: "mustang",
+    allCarsNumber: 13,
+    carsToRent: 3,
+    price: 650,
+  },
+  {
+    name: "mercedes",
+    allCarsNumber: 22,
+    carsToRent: 12,
+    price: 340,
+  },
+];
 
-console.log('\n', 'odp.  A', '\n');
+console.log("\n", "odp.  A", "\n");
 
 function pokazZadanieA(obj) {
-    const newArray = rentalCarCompany.map(function (par) {
-        return par.name
-    })
-    return newArray.sort()
+  const newArray = rentalCarCompany.map(function (par) {
+    return par.name;
+  });
+  return newArray.sort();
 }
-pokazZadanieA(rentalCarCompany)
-const autaPoNazwie = pokazZadanieA()
-console.log(`obiekt posortowany alfabetycznie`, autaPoNazwie)
+pokazZadanieA(rentalCarCompany);
+const autaPoNazwie = pokazZadanieA();
+console.log(`obiekt posortowany alfabetycznie`, autaPoNazwie);
 
-console.log('\n', 'odp.  B', '\n');
+console.log("\n", "odp.  B", "\n");
 
 function pokazZadanieB(obj, kwota) {
-    const newArray = rentalCarCompany.map(function (par) {
-        return {
-            auto: par.name,
-            cena: par.price
-        }
-    })
-    const newArray1 = newArray.filter(function (par1, par2) {
-        par2 = kwota
-        return par1.cena < par2
-    })
-    console.log(`Poniżej mamy auta do dyspozycji w zależności od podanej w parametrze sumy.`)
-    return newArray1
+  const newArray = rentalCarCompany.map(function (par) {
+    return {
+      auto: par.name,
+      cena: par.price,
+    };
+  });
+  const newArray1 = newArray.filter(function (par1, par2) {
+    par2 = kwota;
+    return par1.cena < par2;
+  });
+  console.log(
+    `Poniżej mamy auta do dyspozycji w zależności od podanej w parametrze sumy.`
+  );
+  return newArray1;
 }
 
-const kosztWypozyczenia = pokazZadanieB(rentalCarCompany, 400)
-console.log(kosztWypozyczenia)
+const kosztWypozyczenia = pokazZadanieB(rentalCarCompany, 400);
+console.log(kosztWypozyczenia);
 
-console.log('\n', 'odp.  C', '\n');
+console.log("\n", "odp.  C", "\n");
 
 function pokazZadanieC(obj) {
-    const newArray = rentalCarCompany.map(function (par) {
-        return {
-            auto: par.name,
-            cena: par.price
-        }
-    })
-    const newArray1 = newArray.sort(function (par1, par2) {
-        return par1.cena - par2.cena
-    })
-    return newArray1
+  const newArray = rentalCarCompany.map(function (par) {
+    return {
+      auto: par.name,
+      cena: par.price,
+    };
+  });
+  const newArray1 = newArray.sort(function (par1, par2) {
+    return par1.cena - par2.cena;
+  });
+  return newArray1;
 }
-pokazZadanieC(rentalCarCompany)
-const autaPoCenie = pokazZadanieC()
-console.log(`sortowanie po cenie`, autaPoCenie)
+pokazZadanieC(rentalCarCompany);
+const autaPoCenie = pokazZadanieC();
+console.log(`sortowanie po cenie`, autaPoCenie);
 
-console.log('\n', 'odp.  D', '\n');
+console.log("\n", "odp.  D", "\n");
 
 function pokazZadanieD(obj) {
-    const newArray = rentalCarCompany.map(function (par) {
-        return {
-            auto: par.name,
-            wszystkie: par.allCarsNumber,
-            dostepne: par.carsToRent,
-            kwota: par.price
-        }
-    })
-    const newArray1 = newArray.filter(function (par1) {
-        return par1.wszystkie === par1.dostepne
-    })
-    console.log(`Te marki aut są w 100 % dostępne `)
-    return newArray1
+  const newArray = rentalCarCompany.map(function (par) {
+    return {
+      auto: par.name,
+      wszystkie: par.allCarsNumber,
+      dostepne: par.carsToRent,
+      kwota: par.price,
+    };
+  });
+  const newArray1 = newArray.filter(function (par1) {
+    return par1.wszystkie === par1.dostepne;
+  });
+  console.log(`Te marki aut są w 100 % dostępne `);
+  return newArray1;
 }
-const dostepneWszystkie = pokazZadanieD(rentalCarCompany)
-console.log(dostepneWszystkie)
+const dostepneWszystkie = pokazZadanieD(rentalCarCompany);
+console.log(dostepneWszystkie);
 
-console.log('\n', 'odp.  E', '\n');
+console.log("\n", "odp.  E", "\n");
 
 function pokazZadanieE(obj) {
-    const newArray = rentalCarCompany.map(function (par) {
-        return {
-            auto: par.name,
-            dostepne: par.carsToRent,
-        }
-    })
-    const newArray1 = newArray.sort(function (par1, par2) {
-        return par1.dostepne - par2.dostepne
-    })
-    console.log(`Sortowanie w/g dostępnośći aut`)
-    return newArray1
+  const newArray = rentalCarCompany.map(function (par) {
+    return {
+      auto: par.name,
+      dostepne: par.carsToRent,
+    };
+  });
+  const newArray1 = newArray.sort(function (par1, par2) {
+    return par1.dostepne - par2.dostepne;
+  });
+  console.log(`Sortowanie w/g dostępnośći aut`);
+  return newArray1;
 }
-const sortujDostepnoscAut = pokazZadanieE(rentalCarCompany)
-console.log(sortujDostepnoscAut)
+const sortujDostepnoscAut = pokazZadanieE(rentalCarCompany);
+console.log(sortujDostepnoscAut);
 
-console.log('\n', 'odp.  F', '\n');
+console.log("\n", "odp.  F", "\n");
 
 function pokazZadanieF(obj, kwota) {
-    const newArray = rentalCarCompany.map(function (par) {
-        return {
-            auto: par.name,
-            cena: par.price
-        }
-    })
-    const newArray1 = newArray.filter(function (par1, par2) {
-        par2 = kwota
-        return par1.cena * 7 <= par2
-    })
-    console.log(`W podanej kwocie ,możemy wypożyczyć takie auta na 7 dni`)
-    return newArray1
+  const newArray = rentalCarCompany.map(function (par) {
+    return {
+      auto: par.name,
+      cena: par.price,
+    };
+  });
+  const newArray1 = newArray.filter(function (par1, par2) {
+    par2 = kwota;
+    return par1.cena * 7 <= par2;
+  });
+  console.log(`W podanej kwocie ,możemy wypożyczyć takie auta na 7 dni`);
+  return newArray1;
 }
-const sevenDaysRent = pokazZadanieF(rentalCarCompany, 3500)
-console.log(sevenDaysRent)
+const sevenDaysRent = pokazZadanieF(rentalCarCompany, 3500);
+console.log(sevenDaysRent);
 
-console.log('\n', 'odp.  G', '\n');
+console.log("\n", "odp.  G", "\n");
 
 function pokazZadanieG(obj) {
-    const newArray = obj.map(function (par) {
-        const wynik = par.carsToRent / par.allCarsNumber * 100
-        return {
-            ...par,
-            procentowaIloscAut: wynik.toFixed(0)
-        }
-    }).sort(function (par1, par2) {
-        return par1.procentowaIloscAut - par2.procentowaIloscAut
-    }).filter(function (par1, index) {
-        return index < 3
+  const newArray = obj
+    .map(function (par) {
+      const wynik = (par.carsToRent / par.allCarsNumber) * 100;
+      return {
+        ...par,
+        procentowaIloscAut: wynik.toFixed(0),
+      };
     })
-    console.log(`stosunek aut wypozyczonych do dostępnych `);
-    return newArray
+    .sort(function (par1, par2) {
+      return par1.procentowaIloscAut - par2.procentowaIloscAut;
+    })
+    .filter(function (par1, index) {
+      return index < 3;
+    });
+  console.log(`stosunek aut wypozyczonych do dostępnych `);
+  return newArray;
 }
 const sortujDostepnoscAutzadG = pokazZadanieG(rentalCarCompany);
 console.log(sortujDostepnoscAutzadG);
-
-
 
 // function pokazZadanieG(obj) {
 //     const newArray = obj.map(function (par) {

@@ -6,7 +6,7 @@
 function obliczCene(name, type, price) {
   return name;
 }
-const produkt = {
+const produktList = {
   name: "Ksiazka JS",
   type: "ksiazka",
   price: 100,
@@ -18,7 +18,7 @@ obliczCene(produkt.name, produkt.type, produkt.price);
 function obliczCene(obj) {
   return obj.name;
 }
-const produkt = {
+const produktObj = {
   name: "Ksiazka JS",
   type: "ksiazka",
   price: 100,
@@ -30,14 +30,14 @@ obliczCene(produkt);
 // Jeśli mamy obiekt (produkt) to możemy wyświetlać z niego właściwości na dwa sposoby. Zobacz oba sposoby na poniższych przykładach:
 // Normalnie
 
-const produkt = {
+const produktDestr = {
   name: "Ksiazka JS",
   type: "ksiazka",
   price: 100,
 };
-console.log(produkt.name);
-console.log(produkt.type);
-console.log(produkt.price);
+console.log(produktDestr.name);
+console.log(produktDestr.type);
+console.log(produktDestr.price);
 //
 
 // Destrukturyzacja

@@ -87,7 +87,7 @@ console.log(arr2);
 
 /* e) zwracającą imię osoby przekazanej w obiekcie(powinien zawierać imię, nazwisko i wiek) do funkcji, */
 
-let person = {
+let person1 = {
   age: 55,
   name: "Hans",
   surname: "Kloss",
@@ -96,7 +96,7 @@ function returnObject(par1) {
   return par1.name;
 }
 let transfer = returnObject;
-transfer(person);
+transfer(person1);
 
 /*  f) zwracającą stringa 'imię(tu zmienna) i nazwisko(tu zmienna) ma x(tu zmienna) lat i x(tu zmienna) cm wzrostu' */
 

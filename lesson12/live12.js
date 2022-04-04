@@ -39,7 +39,7 @@ obliczCene('Książka JS',100,23)
     return `Cena produktu ${obj.type} o nazwie ${obj.name} to ${totalPrice} PLN`;
     /* console.log(stawkaVAT) */
   }
-);
+
 
 const produkt = {
   name: "Paradaie",
